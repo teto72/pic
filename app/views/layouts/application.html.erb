@@ -22,11 +22,6 @@
   </head>
 
   <body>
-    <div id="photo">
-      <img src="https://pixabay.com/get/55e9d1434d57b10ff3d8992cc62c377c173ed9e34e5074417d267bd1944bc6_640.jpg" width="500" height="300" alt="11111">
-      <img src="https://pixabay.com/get/57e6d3464d5aaa14f1dc84609629337e173ddfe2554c704c7d2772d4924ec35b_640.jpg" width="500" height="300" alt="">
-      <img src="https://pixabay.com/get/5fe5dc454d55b10ff3d8992cc62c377c173ed9e34e5074417d267bd1944bc3_640.jpg" width="500" height="300" alt="">
-    </div>
     <header class="header">
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">Pic</a></h1>
@@ -60,21 +55,4 @@
       </p>
     </footer>
   </body>
-
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script type="text/javascript">
-    $(function(){
-        const setImg = '#photo';
-        const fadeSpeed = 1600;
-        const switchDelay = 5000;
-
-        $(setImg).children('img').css({opacity:'0'});
-        $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
-
-        setInterval(function(){
-            $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'2'},fadeSpeed).end().appendTo(setImg);
-        },switchDelay);
-    });
-    </script>
 </html>
